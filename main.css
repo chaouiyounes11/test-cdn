@@ -16,6 +16,10 @@ h2, h3, p {
   margin-top: 0px;
 }
 
+button {
+  background-color: transparent;
+}
+
 .circle-for-icone {
   width: 160px;
   height: 160px;
