@@ -1,10 +1,14 @@
 html {
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0px;
   position: absolute;
+  width: auto;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -13,7 +17,7 @@ h2 {
 
 h2, h3, p {
   text-align: center;
-  margin-top: 0px;
+  margin: 0px;
 }
 
 button {
@@ -61,35 +65,40 @@ button {
 
 nav {
   position: relative;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 nav .logo {
-  width: 300px;
+  width: 150px;
   position: absolute;
   left: 65%;
+  top: 25%;
   bottom: 0%;
 }
 
 nav .opener {
   height: 90px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 50px;
   z-index: 333;
+  display: flex;
+  align-items: center;
 }
 
 nav .opener button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100%;
+  height: 50%;
   cursor: pointer;
   transition: 1s;
+  width: auto;
 }
 
 nav .opener span {
   display: block;
-  width: 75px;
-  height: 3px;
+  width: 50px;
+  height: 1px;
   background-color: white;
 }
 
@@ -131,7 +140,7 @@ nav ul li a {
   background-image: url("./images/bg_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 66vw;
+  height: 73vw;
   position: absolute;
   width: 100%;
   top: 0px;
@@ -146,11 +155,12 @@ nav ul li a {
 
 #header h1 {
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2rem;
+  color: white;
 }
 
 #header p {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 #section-1 {
@@ -191,6 +201,7 @@ nav ul li a {
   background-image: url("./images/bg_2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 37vw;
   width: 100%;
   display: flex;
@@ -214,12 +225,15 @@ nav ul li a {
   padding-top: 50px;
 }
 
+#section-4 {
+  height: auto;
+}
+
 #section-4 .first-div {
+  width: 100%;
   height: 100vw;
-  width: 100vw;
   background-color: black;
   color: white;
-  padding: 0px 150px;
 }
 
 #section-4 .first-div .h2-div {
@@ -239,8 +253,7 @@ nav ul li a {
 
 .text-div p {
   text-align: left;
-  padding-right: 100px;
-  font-size: 1.7rem;
+  font-size: .7rem;
 }
 
 .text-div button {
@@ -258,7 +271,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 1rem;
   color: white;
 }
 
@@ -295,7 +308,7 @@ nav ul li a {
 }
 
 .third-div .card p {
-  font-size: 2rem;
+  font-size: .5rem;
 }
 
 #section-5 .container {
@@ -315,13 +328,18 @@ nav ul li a {
   justify-content: space-between;
 }
 
-#section-5 .container .slider {
+#section-5 .container .slider, #section-5 .container .slider-2 {
+  overflow: hidden;
   width: 300%;
   height: auto;
   display: flex;
   margin-left: 0vw;
   transition: 1s;
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#section-5 .container .slider-2 {
+  display: none;
 }
 
 #section-5 .container .slider .card-slider {
@@ -336,4 +354,161 @@ nav ul li a {
 
 #section-5 .container .slider .card-slider img {
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  nav .opener {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  nav .opener button {
+    display: none;
+  }
+
+  nav .logo {
+    left: 5%;
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    top: 25%;
+  }
+
+  nav ul {
+    opacity: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-top: none;
+    padding: 0px 200px;
+    width: 60%;
+    margin-left: 5%;
+    z-index: 9999;
+  }
+
+  nav ul li:nth-child(1) {
+    padding-top: 0px;
+  }
+
+  nav ul li:nth-child(7) {
+    padding-bottom: 0px;
+  }
+
+  nav ul li a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  #header {
+    height: 100vh;
+    background-position: center 100%;
+    background-attachment: fixed;
+    width: 100%;
+  }
+
+  #section-1, #section-3 {
+    margin-top: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #section-1 .h2-div {
+    width: 100%;
+  }
+
+  #section-1 .container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #section-1 .container .card {
+    width: 30%;
+  }
+
+  #section-2 {
+    background-attachment: fixed;
+  }
+
+  #section-3 {
+    margin-top: 0px;
+  }
+
+  #section-3 .h2-div {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  #section-3 .four-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #section-3 .four-items .four-items-card {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+
+  #section-4 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #section-4 .first-div, #section-4 .second-div {
+    width: 50%;
+    height: 50vw;
+  }
+
+  #section-4 .second-div {
+    background-attachment: fixed;
+    font-size: .7rem;
+  }
+
+  #section-4 .second-div p {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  #section-4 .third-div {
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #section-4 .third-div .card {
+    width: 19vw;
+    height: 19vw;
+  }
+
+  #section-4 .third-div .card p {
+    font-size: .4rem;
+  }
+
+  #section-5 .container .slider {
+    display: none;
+  }
+
+  #section-5 .container .slider-2 {
+    display: flex;
+  }
+
+  #section-5 .container .slider-2 .slide-1, #section-5 .container .slider-2 .slide-2, #section-5 .container .slider-2 .slide-3 {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 962px) {
+  #section-3 .four-items .four-items-card {
+    width: 20%;
+    margin-bottom: 30px;
+  }
 }

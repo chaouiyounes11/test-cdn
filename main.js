@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
-  let menuIsOpen = false;
 
+
+  let menuIsOpen = false;
   const crossAnimOpen = () => {
     $('.middle-span').css({
       opacity : 0,
@@ -39,7 +40,6 @@ $(document).ready(function(){
 
     menuIsOpen = true;
   };
-
   const crossAnimClose = () => {
     $('nav ul').css({
       opacity : '0',
@@ -60,6 +60,14 @@ $(document).ready(function(){
     $('body').css('overflow', 'scroll');
     menuIsOpen = false;
     }
+  const chevronLeft = $('.chevron-left');
+  const chevronRight = $('.chevron-right');
+  let containerSlider = $('#section-5 .container .slider');
+  let index = 0;
+
+  if($(window).width() > 768) {
+    containerSlider = $('#section-5 .container .slider-2');
+  }
 
   $('nav .opener button').click(()=> {
     if(!menuIsOpen) {
@@ -69,17 +77,11 @@ $(document).ready(function(){
     }
   });
 
-  const chevronLeft = $('.chevron-left');
-  const chevronRight = $('.chevron-right');
-  const containerSlider = $('#section-5 .container .slider');
-  let index = 0;
-
   chevronRight.click(()=> {
     if (index > -200) {
       index -=100;
       $(containerSlider).css('margin-left', `${index}vw`);
     }
-    console.log(index);
   });
 
   chevronLeft.click(()=> {
