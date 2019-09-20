@@ -18,6 +18,8 @@ h2, h3, p {
 
 button {
   background-color: transparent;
+  color: transparent;
+  border-color: transparent;
 }
 
 .circle-for-icone {
@@ -319,6 +321,7 @@ nav ul li a {
   display: flex;
   margin-left: 0vw;
   transition: 1s;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 
 #section-5 .container .slider .card-slider {
