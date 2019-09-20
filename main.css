@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600');
+
 html {
   position: relative;
   width: 100%;
@@ -6,13 +9,39 @@ html {
 
 body {
   margin: 0px;
-  position: absolute;
   width: auto;
   overflow-x: hidden;
 }
 
-h2 {
-  font-size: 3rem;
+h2, h3 {
+  font-size: 2rem;
+  font-family: Montserrat;
+  font-weight: 100;
+  color: #2e84b7;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #232323;
+}
+
+p {
+  font-family: Roboto;
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+.h2-div {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.h2-div p {
+  width: 200px;
+  margin: 0px auto 0px auto;
 }
 
 h2, h3, p {
@@ -27,12 +56,16 @@ button {
 }
 
 .circle-for-icone {
-  width: 160px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   border-radius: 100% 100%;
-  background-color: lightblue;
+  background-color: #2e84b7;
   display: flex;
   justify-content: center;
+}
+
+.circle-for-icone svg {
+  width: 40px;
 }
 
 .four-items {
@@ -45,11 +78,11 @@ button {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 75%;
+  width: 75vw;
   margin: auto;
-  border-bottom: 8px solid lightblue;
+  border-bottom: 4px solid #2e84b7;
   margin-bottom: 30px;
-  height: 600px;
+  height: 350px;
 }
 
 .four-items-card:nth-child(4) {
@@ -59,27 +92,26 @@ button {
 .four-items-card p {
   width: 50%;
   margin: 0px auto;
-  font-size: 1.5rem;
   text-align: center;
 }
 
 nav {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px 0px 0px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
 nav .logo {
   width: 150px;
-  position: absolute;
-  left: 65%;
-  top: 25%;
-  bottom: 0%;
 }
 
 nav .opener {
-  height: 90px;
-  width: 50px;
+  height: 80px;
+  width: auto;
   z-index: 333;
   display: flex;
   align-items: center;
@@ -93,6 +125,7 @@ nav .opener button {
   cursor: pointer;
   transition: 1s;
   width: auto;
+  padding-left: 15px;
 }
 
 nav .opener span {
@@ -105,14 +138,15 @@ nav .opener span {
 nav ul {
   display: none;
   position: absolute;
+  top: 100%;
   height: 0px;
   width: 100%;
   padding: 0;
   margin: 0;
-  transition: 2s;
+  transition: 1s;
   opacity: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-top: 5px solid white;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-top: 5px solid #2e84b7;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -122,18 +156,20 @@ nav ul li {
   list-style-type: none;
 }
 
-nav ul li:nth-child(1) {
-  padding-top: 100px;
-}
-
 nav ul li:nth-child(7) {
   padding-bottom: 100px;
 }
 
 nav ul li a {
-  color: black;
-  font-size: 3rem;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: none;
+  font-size: 1rem;
   text-transform: uppercase;
+  font-family: Roboto;
+}
+
+nav ul li a:visited {
+  color: white;
 }
 
 #header {
@@ -153,48 +189,68 @@ nav ul li a {
   z-index: -333;
 }
 
+header .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+}
+
 #header h1 {
   text-transform: uppercase;
   font-size: 2rem;
   color: white;
+  font-family: Montserrat;
+  font-weight: 100;
+  z-index: 10;
 }
 
 #header p {
   font-size: 1.5rem;
+  color: #6f6f6f;
+  font-family: Montserrat;
+  font-weight: 100;
+  z-index: 10;
 }
 
 #section-1 {
-  margin-top: 68vw;
+  margin-top: 60%;
 }
 
 #section-1 p {
-  text-align: center;
+  text-align: justify;
   font-weight: lighter;
-  font-size: 1rem;
-  width: 80%;
-  margin: auto;
-  padding-bottom: 50px;
+}
+
+#section-1 .h2-div p {
+  text-align: center;
 }
 
 #section-1 div span {
   display: block;
-  width: 2px;
-  height: 50px;
-  background-color: blue;
+  width: 1px;
+  height: 35px;
+  background-color: #2e84b7;
 }
 
 #section-1 .h3-box {
   display: flex;
+  width: 200px;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  width: 300px;
+  margin: auto;
+  padding: 0px 2vw 30px 2vw;
+}
+
+#section-1 .card p {
+  width: 250px;
   margin: auto;
   padding-bottom: 30px;
 }
 
-#section-1 .h3-box h3 {
-  font-size: 2rem;
+#section-1 .h3-box img {
+  width: 25px;
 }
 
 #section-2 {
@@ -211,13 +267,17 @@ nav ul li a {
   color: white;
 }
 
+#section-2 h2 {
+  color: white;
+}
+
 #section-2 p {
   width: 350px;
   text-align: center;
 }
 
 #section-3 {
-  background-color: lightgrey;
+  background-color: #f7f7f7;
 }
 
 #section-3 h2 {
@@ -227,13 +287,16 @@ nav ul li a {
 
 #section-4 {
   height: auto;
+  padding-bottom: 100px;
 }
 
 #section-4 .first-div {
   width: 100%;
-  height: 100vw;
-  background-color: black;
+  height: auto;
+  padding: 30px 0px;
+  background-color: #1c1c1c;
   color: white;
+  padding-left: 5vw;
 }
 
 #section-4 .first-div .h2-div {
@@ -244,8 +307,14 @@ nav ul li a {
   justify-content: center;
 }
 
+#section-4 .first-div .h2-div p {
+  font-size: .6rem;
+  margin: 0px;
+}
+
 .text-div {
   height: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,13 +322,23 @@ nav ul li a {
 
 .text-div p {
   text-align: left;
-  font-size: .7rem;
+}
+
+#section-4 .first-div .text-div .first-p {
+  font-weight: bold;
+  padding: 25px 0px;
+}
+
+#section-4 .first-div .text-div .second-p {
+  font-weight: 100;
+  font-size: .6rem;
 }
 
 .text-div button {
-  background-color: white;
+  background-color: #f7f7f7;
   color: black;
   width: 100px;
+  padding: 5px 0px;
   margin-top: 50px;
 }
 
@@ -276,14 +355,14 @@ nav ul li a {
 }
 
 .second-div p {
-  background-color: lightblue;
-  width: 60vw;
-  height: 60vw;
+  background-color: #2e84b7;
+  width: 50vw;
+  height: 50vw;
   margin: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 10px;
 }
 
 .third-div {
@@ -292,8 +371,15 @@ nav ul li a {
 
 .third-div .card {
   width: 60vw;
-  height: 60vw;
-  margin: auto;
+  height: auto;
+  margin: 10px auto 10px auto;
+  padding: 10px 0px;
+  border-top: 2px solid #2e84b7;
+  border-bottom: 2px solid #2e84b7;
+}
+
+.third-div .card:nth-child(odd), .third-div .card:nth-child(2) {
+  border-bottom: none;
 }
 
 .third-div .card h3 {
@@ -309,6 +395,10 @@ nav ul li a {
 
 .third-div .card p {
   font-size: .5rem;
+}
+
+#section-5 {
+  background-color: #f7f7f7;
 }
 
 #section-5 .container {
@@ -352,8 +442,20 @@ nav ul li a {
   align-content: center;
 }
 
+#section-5 .container .slider .card-slider p {
+  padding: 25px 0px;
+}
+
+#section-5 .container .slider .card-slider p:nth-child(2) {
+  border-bottom: 1px solid lightgrey;
+}
+
 #section-5 .container .slider .card-slider img {
   width: 100%;
+}
+
+.chevron-left img, .chevron-right img {
+  width: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -373,21 +475,21 @@ nav ul li a {
   }
 
   nav .logo {
-    left: 5%;
     width: 150px;
-    height: 100%;
-    position: absolute;
-    top: 25%;
+    height: auto;
   }
 
   nav ul {
     opacity: 1;
+    position: relative;
+    background-color: transparent;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     border-top: none;
-    padding: 0px 200px;
     width: 60%;
+    top: 0px;
     margin-left: 5%;
     z-index: 9999;
   }
@@ -401,7 +503,7 @@ nav ul li a {
   }
 
   nav ul li a {
-    font-size: 1rem;
+    font-size: 1vw;
     color: white;
     text-decoration: none;
   }
@@ -414,9 +516,36 @@ nav ul li a {
   }
 
   #section-1, #section-3 {
-    margin-top: 100vh;
+    margin-top: 85vh;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #section-1 {
+    padding-bottom: 50px;
+  }
+
+  #section-1 .container {
+    width: 100%;
+    padding: 0px 3vw;
+    flex-wrap: wrap;
+  }
+
+  #section-1 .container .card {
+    position: relative;
+    width: 434.281px;
+  }
+
+  #section-1 .card .h3-box {
+    padding: 0px;
+    margin: 0px;
+    transform: translateX(-90px);
+  }
+
+  #section-1 .card p {
+    padding-bottom: 30px;
+    padding-top: 2vw;
   }
 
   #section-1 .h2-div {
@@ -426,10 +555,12 @@ nav ul li a {
   #section-1 .container {
     display: flex;
     justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
   }
 
-  #section-1 .container .card {
-    width: 30%;
+  #section-1 .container .card p {
+    text-align: left;
   }
 
   #section-2 {
@@ -456,14 +587,40 @@ nav ul li a {
     margin-bottom: 30px;
   }
 
+  .four-items-card p {
+    width: 81%;
+  }
+
   #section-4 {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
+    padding-bottom: 0px;
   }
 
   #section-4 .first-div, #section-4 .second-div {
     width: 50%;
     height: 50vw;
+    padding: 0px;
+  }
+
+  #section-4 .first-div .h2-div, #section-4 .first-div .text-div {
+    padding-left: 85px;
+    width: 450px;
+  }
+
+  #section-4 .first-div .h2-div {
+    height: 30%;
+    justify-content: end;
+  }
+
+  #section-4 .first-div .text-div {
+    height: 70%;
+    justify-content: start;
+  }
+
+  #section-4 .text-div button {
+    margin: 50px 0px;
   }
 
   #section-4 .second-div {
@@ -472,12 +629,13 @@ nav ul li a {
   }
 
   #section-4 .second-div p {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
+    padding: 15px;
   }
 
   #section-4 .third-div {
-    margin-top: 5vw;
+    margin-top: 0px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -485,11 +643,21 @@ nav ul li a {
 
   #section-4 .third-div .card {
     width: 19vw;
-    height: 19vw;
+    height: auto;
+    border: none;
+  }
+
+  #section-4 .third-div .card h3 {
+    font-size: 1rem;
+  }
+
+  #section-4 .third-div .card span {
+    font-size: 1.5rem;
   }
 
   #section-4 .third-div .card p {
-    font-size: .4rem;
+    font-size: .5rem;
+    padding-top: 15px;
   }
 
   #section-5 .container .slider {
@@ -504,10 +672,10 @@ nav ul li a {
   }
 
   #section-5 .container .slider-2 .slide-1, #section-5 .container .slider-2 .slide-2, #section-5 .container .slider-2 .slide-3 {
-    width: 100%;
+    width: 100vw;
     display: flex;
     margin: auto;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   #section-5 .container .slider-2 .card-slider {
@@ -515,10 +683,35 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     width: 25%;
+    background-color: white;
+    max-width: 320px;
+    margin: 0px 10px;
+  }
+
+  #section-5 .container .slider-2 .card-slider p {
+    padding: 25px 0px;
+    width: 180px;
+    margin: auto;
+  }
+
+  #section-5 .container .slider-2 .card-slider p:nth-child(2) {
+    border-bottom: 1px solid lightgrey;
+  }
+
+  #section-5 .container .chevron {
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    left: 5%;
   }
 }
 
 @media screen and (min-width: 962px) {
+  #section-1 .container .card {
+    position: relative;
+    width: 254.281px;
+  }
+
   #section-3 .four-items .four-items-card {
     width: 20%;
     margin-bottom: 30px;
