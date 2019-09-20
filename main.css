@@ -185,7 +185,7 @@ nav ul li a {
   background-image: url("./images/bg_2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vw;
+  height: 37vw;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -220,12 +220,15 @@ nav ul li a {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  height: 50%;
+  height: 30%;
   justify-content: center;
 }
 
 .text-div {
-  height: 50%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-div p {
@@ -237,5 +240,93 @@ nav ul li a {
 .text-div button {
   background-color: white;
   color: black;
+  width: 100px;
   margin-top: 50px;
+}
+
+.second-div {
+  height: 100vw;
+  width: 100%;
+  background-image: url("./images/bg_3.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.second-div p {
+  background-color: lightblue;
+  width: 60vw;
+  height: 60vw;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.third-div {
+  margin-top: 30vw;
+}
+
+.third-div .card {
+  width: 60vw;
+  height: 60vw;
+  margin: auto;
+}
+
+.third-div .card h3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5rem;
+}
+
+.third-div .card h3 span {
+  font-size: 4rem;
+  color: lightgrey;
+}
+
+.third-div .card p {
+  font-size: 2rem;
+}
+
+#section-5 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+#section-5 .container .chevron {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#section-5 .container .slider {
+  width: 300%;
+  height: auto;
+  display: flex;
+  margin-left: 0vw;
+  transition: 1s;
+}
+
+#section-5 .container .slider .card-slider {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#section-5 .container .slider .card-slider img {
+  width: 100%;
 }

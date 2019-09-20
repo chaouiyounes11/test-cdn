@@ -69,4 +69,26 @@ $(document).ready(function(){
     }
   });
 
+  const chevronLeft = $('.chevron-left');
+  const chevronRight = $('.chevron-right');
+  const containerSlider = $('#section-5 .container .slider');
+  let index = 0;
+
+  chevronRight.click(()=> {
+    if (index > -200) {
+      index -=100;
+      $(containerSlider).css('margin-left', `${index}vw`);
+    }
+    console.log(index);
+  });
+
+  chevronLeft.click(()=> {
+    if (index < 0) {
+      index +=100;
+      $(containerSlider).css('margin-left', `${index}vw`);
+    }
+  });
+
+
+
 });
