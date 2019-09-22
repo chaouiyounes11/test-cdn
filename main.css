@@ -303,7 +303,14 @@ header .overlay {
   padding: 30px 0px;
   background-color: #1c1c1c;
   color: white;
-  padding-left: 5vw;
+}
+
+#section-4 h2, #section-4 p, #section-4 .first-p {
+  padding-left: 5vw !important;
+}
+
+#section-4 button {
+  margin-left: 5vw;
 }
 
 #section-4 .first-div .h2-div {
