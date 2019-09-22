@@ -115,7 +115,8 @@ nav .logo {
 
 nav .opener {
   height: 80px;
-  width: auto;
+  width: 60px;
+  margin-left: 10px;
   z-index: 333;
   display: flex;
   align-items: center;
@@ -128,7 +129,7 @@ nav .opener button {
   height: 35%;
   cursor: pointer;
   transition: 1s;
-  width: auto;
+  width: 60px;
   padding-left: 15px;
 }
 
