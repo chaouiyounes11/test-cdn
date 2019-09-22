@@ -676,6 +676,10 @@ footer {
     padding: 0px;
   }
 
+  #section-4 .first-div {
+    font-size: 1vw;
+  }
+
   #section-4 .first-div .h2-div, #section-4 .first-div .text-div {
     padding-left: 85px;
     width: 75%;
@@ -815,5 +819,10 @@ footer {
   #section-3 .four-items .four-items-card {
     width: 20%;
     margin-bottom: 30px;
+  }
+
+  #section-4 .first-div {
+    font-size: .8rem;
+    ;
   }
 }
