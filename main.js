@@ -101,13 +101,12 @@ $('.js-scrollTo').on('click', function(event) {
   chevronRight.click(()=> {
     if (index > -200) {
       index -=100;
-      $(containerSlider).css('transition', '1s');
-      console.log(index);
+      $(containerSlider).css('transition-timing-function', 'cubic-bezier(0.22, 0.61, 0.36, 1)');
       $(containerSlider).css('margin-left', `${index}vw`);
     } else if (index === -200) {
       $(containerSlider).css({
         marginLeft : '0vw',
-        transition : '.5s',
+        transitionTimingFunction : 'cubic-bezier(0.18, 0.89, 0.32, 1.28)',
       });
       index = 0;
     }
@@ -117,12 +116,12 @@ $('.js-scrollTo').on('click', function(event) {
   chevronLeft.click(()=> {
     if (index < 0) {
       index +=100;
-      $(containerSlider).css('transition', '1s');
+      $(containerSlider).css('transition-timing-function', 'cubic-bezier(0.22, 0.61, 0.36, 1)');
       $(containerSlider).css('margin-left', `${index}vw`);
     } else if (index === 0) {
       $(containerSlider).css({
         marginLeft : '-200vw',
-        transition : '.5s',
+        transitionTimingFunction : 'cubic-bezier(0.18, 0.89, 0.32, 1.28)',
       });
       index = -200;
     }
