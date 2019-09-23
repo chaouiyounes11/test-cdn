@@ -2,33 +2,6 @@ $(document).ready(function(){
 
 // SMOOTH SCROLL function
 
-$('.js-scrollTo-1').on('click', function(event) {
-
-    if (this.hash !== "") {
-      event.preventDefault();
-      let destination  = 0;
-
-      if ($(window).width() < 768) {
-        destination = destination;
-      } else {
-        destination =30;
-
-      }
-
-      var hash = this.hash;
-
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top + 30
-      }, 800, function(){
-
-        window.location.hash = hash;
-        if ($(window).width() < 768) {
-          crossAnimClose();
-        }
-      });
-    } // End if
-  });
-
 $('.js-scrollTo').on('click', function(event) {
 
     if (this.hash !== "") {
